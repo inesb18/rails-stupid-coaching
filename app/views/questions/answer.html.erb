@@ -1,14 +1,24 @@
-<h2> Your message </h2>
-<p><%= @message %></p>
+<div class="message">
+  <p class="message-content"><%=@message%></p>
+  <p class="message-sender">-You</p>
+</div>
 
-<h2>The coach answer </h2>
+<div class="message">
 
-<% if @message == "I am going to work"%>
-  <p>Great!</p>
-<% elsif @message[-1] == "?" %>
-  <p>Silly question, get dressed and go to work!</p>
-<% else %>
-  <p>I don't care, get dressed and go to work!</p>
-<%end%>
+  <p class="message-content">
+    <% if @message == "I am going to work"%>
+      Great!
+    <% elsif @message[-1] == "?" %>
+      Silly question, get dressed and go to work!
+    <% else %>
+      I don't care, get dressed and go to work!
+    <%end%>
+  </p>
 
-<%= link_to "Ask a new question", ask_path %>
+  <p class="message-sender">-Your coach</p>
+
+</div>
+
+<div class="back-to-ask">
+  <%= link_to "Ask a new question", ask_path %>
+</div>
