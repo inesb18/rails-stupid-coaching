@@ -2,6 +2,7 @@ class QuestionsController < ApplicationController
   def ask
   end
 
-  def anwser
+  def answer
+    @message = params[:question]
   end
 end

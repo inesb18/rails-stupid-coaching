@@ -1,0 +1,12 @@
+<h2> Your message </h2>
+<p><%= @message %></p>
+
+<h2>The coach answer </h2>
+
+<% if @message == "I am going to work"%>
+  <p>Great!</p>
+<% elsif @message[-1] == "?" %>
+  <p>Silly question, get dressed and go to work!</p>
+<% else %>
+  <p>I don't care, get dressed and go to work!</p>
+<%end%>
